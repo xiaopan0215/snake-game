@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-blue: #00BFFF;
+    --primary-yellow: #FFD700;
+    --accent-orange: #FFA500;
+  }
+  
+  body {
+    @apply bg-[var(--primary-blue)] text-white overflow-hidden;
+    font-family: 'Arial', sans-serif;
+  }
+}
+
+.concentric-circles {
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 20%, transparent 20%, transparent 100%),
+              radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 40%, transparent 40%, transparent 100%),
+              radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 60%, transparent 60%, transparent 100%);
+  background-size: 100% 100%;
+  background-position: center;
+}
